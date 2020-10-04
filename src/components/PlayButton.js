@@ -19,6 +19,7 @@ class PlayButton extends Component{
         super(props);
         this.playEachBall = this.playEachBall.bind(this);
         this.showWinner = this.showWinner.bind(this);
+        this.resetMatch = this.resetMatch.bind(this);
         this.state={
             'player1':0,
             'player1Disbled':true,
@@ -80,6 +81,17 @@ class PlayButton extends Component{
         }
     }
 
+    resetMatch(){
+        this.setState({
+            'player1':0,
+            'player1Disbled':true,
+            'player2':0,
+            'player2Disbled':true,
+            'winner':'__________',
+            'note':'__________',
+        });
+    }
+
     render(){
         return(
             <>
@@ -88,6 +100,7 @@ class PlayButton extends Component{
             <p>Player 1 Score {this.state.player1}</p>
             <p>Player 2 Score {this.state.player2}</p>
             <p><button onClick={this.showWinner}>Show Result</button></p>
+            <p><button onClick={this.resetMatch}>Reset match</button></p>
             <p>{this.state.note}</p>
             </>
         );    
