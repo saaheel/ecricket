@@ -95,12 +95,16 @@ class PlayButton extends Component{
     render(){
         return(
             <>
-            <button disabled={!this.state.player1Disbled} onClick={() => this.playEachBall(1)}>Player 1 Play</button>
-            <button disabled={!this.state.player2Disbled} onClick={() => this.playEachBall(2)}>Player 2 Play</button>
+            <p>
+                <button disabled={!this.state.player1Disbled} onClick={() => this.playEachBall(1)}>Player 1 Play</button>
+                <button disabled={!this.state.player2Disbled} onClick={() => this.playEachBall(2)}>Player 2 Play</button>
+            </p>
             <p>Player 1 Score {this.state.player1}</p>
             <p>Player 2 Score {this.state.player2}</p>
-            <p><button onClick={this.showWinner}>Show Result</button></p>
-            <p><button onClick={this.resetMatch}>Reset match</button></p>
+            <p>
+                <button onClick={this.showWinner}>Show Result</button>
+                <button onClick={this.resetMatch}>Reset match</button>
+            </p>
             <p>{this.state.note}</p>
             </>
         );    
