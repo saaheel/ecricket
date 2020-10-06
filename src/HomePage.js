@@ -1,14 +1,13 @@
 import React from 'react';
 import Header from './Header';
-import PlayButton from './components/PlayButton';
+import PlayBookCricket from './pages/PlayBookCricket';
 
 const HomePage = () => {
 
     return(
         <>
         <Header />
-        <PlayButton />
-
+        <PlayBookCricket />
         </>
     );
 }
