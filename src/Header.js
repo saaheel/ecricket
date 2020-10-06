@@ -3,7 +3,7 @@ import React from 'react';
 const Header = () => {
     return(
         <header>
-        eCricket Coming Soon ...!!!
+        <img src="./logo.jpg" width="300px" alt="eCricket.live" />
       </header>
     );
 }
